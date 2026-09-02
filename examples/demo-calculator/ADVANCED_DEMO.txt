@@ -1,0 +1,22 @@
+【Visual TUI】
+启动后先输入：
+/dashboard
+/agents
+/memory
+
+【Long-term Memory】
+1. 输入：请记住：以后为 Python 项目补回归测试时优先使用 unittest。
+2. 在 ask 模式下允许 memory 写入。
+3. 输入 /memory，确认 USER 中出现该偏好。
+4. 输入 /new，新建独立 Session。
+5. 输入：请告诉我你记得的 Python 测试偏好。
+预期：新 Session 仍能从长期 Memory 中读取 unittest 偏好。
+
+【Subagent Delegation + Coding】
+输入：
+请先调用 reviewer 子代理独立审查这个 calculator 项目的实现和测试，重点检查是否满足 README 需求；得到 reviewer 结论后，由你自己完成必要修改、补充回归测试，并运行全部测试验证。不要修改 README。
+
+预期主链路：
+task(reviewer) → reviewer read-only analysis → main agent edit → bash unittest → final answer
+
+内置 reviewer/tester/default 子代理都只能 list_files/search/read，不能直接修改文件或调用 memory/task。
