@@ -1,5 +1,5 @@
 项目地址：
-<请替换为最终公开 Git 仓库地址>
+<https://github.com/tomyswift1/ccmodel>
 
 项目简介：
 本项目实现了一个轻量级本地 Coding Agent，不依赖 LangChain、AutoGen、OpenAI Agents SDK 等 Agent 框架，而是基于大语言模型原生 Tool Calling，从底层实现“模型决策—本地执行—环境反馈—继续决策”的完整 Agent 闭环。系统支持自主读取、搜索、创建和修改代码，并能够执行命令、运行测试和根据失败结果自动纠错。
